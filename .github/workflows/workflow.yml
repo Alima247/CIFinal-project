@@ -17,3 +17,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20
+
+      - name: Simulated Failing Test
+        run: |
+              echo "Simulating a failing test"
+              false
+        continue-on-error: true
